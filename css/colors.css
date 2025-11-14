@@ -1,0 +1,10 @@
+/* O :root representa o HTML , garante que todas as variaveis serão globais */
+:root{
+    --roxo: #4a017a;
+    --roxo-claro: #c57df5;
+}
+
+h1{
+    color: var(--roxo);
+    text-shadow: var(2px, 2px, 4px,--roxo-claro);
+}

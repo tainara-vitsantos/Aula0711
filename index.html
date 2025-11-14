@@ -9,6 +9,7 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="bg-black">
@@ -61,7 +62,7 @@
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit">Procurar</button>
         </form>
       </div>
     </div>
@@ -84,27 +85,54 @@
 
       <!-- Conatiner 2 -->
       <div class="col-9 bg-dark">
-        <h1 class="text-center text-roxo">
+        <h1 class="text-center">
           Conheça mais sobre os filmes e séries mundiais
         </h1>
+
+        <!-- Carrossel -->
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imgs/imagemFundo2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://media.themoviedb.org/t/p/w500_and_h282_face/4PeIPAu1LZt8oqCC6UAtpjgFAHX.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/jfVTJm9NilA?si=q5Dq6cBu97gx0JIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
 
         <div class="row mt-1 justify-content-evenly">
           <h2 class="display-6"> Filmes Americanos</h2>
 
           <!-- Filme 1 -->
-          <div class="col-2">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <div class="card">
               <img src="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/xLxgVxFWvb9hhUyCDDXxRPPnFck.jpg"
                 class="card-img-top" alt="Capa do filme Coringa">
               <div class="card-body">
                 <h5 class="card-title">Coringa (2019)</h5>
                 <a href="/filmes/americanos/coringa.html" class="btn btn-primary">Saiba Mais</a>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#coringa" class="btn btn-outline-info w-100 mt-1">
+                  Ver Resumo
+                </button>
+                
               </div>
             </div>
           </div>
-          
+
           <!-- filme 2 -->
-          <div class="col-2">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <div class="card">
               <img src="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/tPq8xqhsTYZzUGwMKuksa0eyeGZ.jpg"
                 class="card-img-top" alt="Capa do filme nossa culpa">
@@ -116,19 +144,19 @@
           </div>
 
           <!-- Filme 3 -->
-          <div class="col-2">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <div class="card">
               <img src="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/1uuOVgBsYZb0DLbFnF5xvEnZ7gv.jpg"
                 class="card-img-top" alt="CApa do filme premonição">
               <div class="card-body">
-                <h5 class="card-title">Premonição 6(2025))</h5>
+                <h5 class="card-title">Premonição 6(2025)</h5>
                 <a href="/filmes/americanos/bailarina.html" class="btn btn-primary">Saiba Mais</a>
               </div>
             </div>
           </div>
 
           <!-- Filme 4 -->
-          <div class="col-2">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <div class="card">
               <img src="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/pWvQsP9o1MQ4vQNjpL9QeYFXKOs.jpg"
                 class="card-img-top" alt="CApa do filme Kraven">
@@ -168,7 +196,24 @@
 
 
 
-
+  <!-- Modal -->
+<div class="modal fade" id="coringa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-roxo text-ligth">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
